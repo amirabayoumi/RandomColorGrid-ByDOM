@@ -1,0 +1,18 @@
+{
+  "name": "dom-gridtask",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open --host",
+    "build": "vite build",
+    "preview": "vite preview --open --host",
+    "deploy": "surge ./dist amira-gridbydom.surge.sh"
+  },
+  "devDependencies": {
+    "vite": "^6.0.5"
+  },
+  "dependencies": {
+    "randomcolor": "^0.6.2"
+  }
+}

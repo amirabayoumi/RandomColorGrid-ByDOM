@@ -1,0 +1,47 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+body {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 4fr;
+  max-height: 100vh;
+  section {
+    &:nth-child(1) {
+      padding: 2rem;
+      background-color: #f1bab4;
+      form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+
+        gap: 1rem;
+        > div {
+          display: flex;
+          flex-direction: column;
+          label {
+            font-size: 1.5rem;
+          }
+
+          input {
+            border-radius: 10px;
+            padding: 1rem;
+          }
+        }
+        button {
+          grid-row: 1 / span 3;
+          grid-column: 2;
+          background-color: #9c7c78;
+          font-size: 3rem;
+          border-radius: 10px;
+          &:hover {
+            background-color: #b88f8b;
+          }
+        }
+      }
+    }
+    &:nth-child(2) {
+      grid-row: span 2;
+      background-color: #b2d2df;
+    }
+  }
+}
