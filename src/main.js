@@ -8,14 +8,15 @@ import randomColor from "randomcolor";
 // console.log(document.querySelector("#gridRow"));
 // console.log(document.querySelector("#gridColors"));
 
-const numberOfColumnsAndRows = [];
-numberOfColumnsAndRows.length = 0;
-const staticGrid = document.querySelector("section:nth-child(2)");
-const gridPlayground = document.querySelector("section:nth-child(3)");
-
 document.querySelector("form").onsubmit = function (e) {
   e.preventDefault();
 
+  const staticGrid = document.querySelector("section:nth-child(2)");
+  const gridPlayground = document.querySelector("section:nth-child(3)");
+  gridPlayground.innerHTML = "";
+  staticGrid.innerHTML = "";
+  const numberOfColumnsAndRows = [];
+  numberOfColumnsAndRows.length = 0;
   numberOfColumnsAndRows.push({
     columns: document.querySelector("#gridColumn").value,
     rows: document.querySelector("#gridRow").value,
@@ -35,6 +36,10 @@ document.querySelector("form").onsubmit = function (e) {
   for (let i = 0; i < colorNumber; i++) {
     colorsArray.push(randomColor());
   }
+
+  // randomColor({
+  //   count: colorNumber,
+  // });
 
   // console.log(colorsArray);
 
